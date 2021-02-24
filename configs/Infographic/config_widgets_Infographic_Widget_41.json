@@ -1,0 +1,196 @@
+{
+  "layout": {
+    "definition": [
+      {
+        "type": "column",
+        "isClosable": true,
+        "reorderEnabled": true,
+        "title": "",
+        "width": 100,
+        "content": [
+          {
+            "type": "stack",
+            "isClosable": true,
+            "reorderEnabled": true,
+            "title": "",
+            "activeItemIndex": 0,
+            "height": 18.81533101045296,
+            "content": [
+              {
+                "type": "component",
+                "isClosable": true,
+                "componentName": "jimu grid",
+                "componentState": {
+                  "id": "3002241933979466-1"
+                },
+                "reorderEnabled": true,
+                "title": "jimu grid",
+                "id": "3002241933979466-1"
+              }
+            ]
+          },
+          {
+            "type": "stack",
+            "isClosable": true,
+            "reorderEnabled": true,
+            "title": "",
+            "activeItemIndex": 0,
+            "height": 81.18466898954703,
+            "content": [
+              {
+                "type": "component",
+                "isClosable": true,
+                "componentName": "jimu grid",
+                "componentState": {
+                  "id": "3002241933979466-2"
+                },
+                "reorderEnabled": true,
+                "title": "jimu grid",
+                "id": "3002241933979466-2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "dijits": [
+    {
+      "id": "3002241933979466-1",
+      "type": "text",
+      "visible": true,
+      "config": {
+        "background": {
+          "backgroundColor": "#222222",
+          "alignment": {
+            "horizontal": "center",
+            "vertical": "middle"
+          },
+          "link": ""
+        },
+        "font": {
+          "font": {
+            "fontFamily": "Arial",
+            "bold": false,
+            "italic": false,
+            "underline": false
+          },
+          "fontSize": 16,
+          "textColor": "#fff"
+        },
+        "text": "TOTAL DEATH NUMBERS BY WEEK"
+      }
+    },
+    {
+      "id": "3002241933979466-2",
+      "type": "chart",
+      "visible": true,
+      "config": {
+        "data": {
+          "mode": "category",
+          "type": "line",
+          "clusterField": "week_start",
+          "dateConfig": {
+            "minPeriod": "automatic",
+            "isNeedFilled": true
+          },
+          "valueFields": [
+            "deaths_weekly"
+          ],
+          "operation": "sum",
+          "nullValue": true,
+          "sortOrder": {
+            "isAsc": true,
+            "field": "deaths_weekly",
+            "isLabelAxis": "on"
+          },
+          "maxLabels": 42
+        },
+        "display": {
+          "backgroundColor": "#222222",
+          "seriesStyle": {
+            "type": "series",
+            "styles": [
+              {
+                "style": {
+                  "color": [
+                    "#ff8c00"
+                  ]
+                },
+                "name": "deaths_weekly",
+                "label": "deaths_weekly"
+              }
+            ]
+          },
+          "legend": {
+            "textStyle": {
+              "color": "#ffffff",
+              "fontSize": 12
+            },
+            "show": false
+          },
+          "displayRange": "ALL",
+          "xAxis": {
+            "textStyle": {
+              "color": "#ffffff",
+              "fontSize": 12
+            },
+            "show": true,
+            "format": {}
+          },
+          "yAxis": {
+            "textStyle": {
+              "color": "#ffffff",
+              "fontSize": 12
+            },
+            "show": true,
+            "format": {
+              "type": "float",
+              "digitSeparator": true
+            }
+          },
+          "tooltip": {
+            "confine": true,
+            "trigger": "axis"
+          },
+          "marks": {}
+        }
+      }
+    },
+    {
+      "id": "3002241933979466-3",
+      "type": "text",
+      "visible": false,
+      "config": {
+        "background": {
+          "backgroundColor": "#222222",
+          "alignment": {
+            "horizontal": "center",
+            "vertical": "top"
+          },
+          "link": ""
+        },
+        "font": {
+          "font": {
+            "fontFamily": "Arial",
+            "bold": false,
+            "italic": false,
+            "underline": false
+          },
+          "fontSize": 12,
+          "textColor": "#fff"
+        },
+        "text": "Description: additional information about this infographic."
+      }
+    }
+  ],
+  "name": "line",
+  "wid": "3002241933979466",
+  "dataSource": {
+    "dataSourceType": "DATA_SOURCE_FEATURE_LAYER_FROM_MAP",
+    "name": "COVID-19 Cases, Tests, and Deaths- CSV",
+    "layerId": "091f7244-4b78-497d-8db3-ee4a95cbaf04",
+    "useSelection": true,
+    "filterByExtent": "on"
+  }
+}

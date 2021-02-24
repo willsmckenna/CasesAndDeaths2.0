@@ -1,0 +1,203 @@
+{
+  "layout": {
+    "definition": [
+      {
+        "type": "column",
+        "isClosable": true,
+        "reorderEnabled": true,
+        "title": "",
+        "width": 100,
+        "content": [
+          {
+            "type": "stack",
+            "isClosable": true,
+            "reorderEnabled": true,
+            "title": "",
+            "activeItemIndex": 0,
+            "height": 21.951219512195127,
+            "content": [
+              {
+                "type": "component",
+                "isClosable": true,
+                "componentName": "jimu grid",
+                "componentState": {
+                  "id": "32712098728619465-1"
+                },
+                "reorderEnabled": true,
+                "title": "jimu grid",
+                "id": "32712098728619465-1"
+              }
+            ]
+          },
+          {
+            "type": "stack",
+            "isClosable": true,
+            "reorderEnabled": true,
+            "title": "",
+            "activeItemIndex": 0,
+            "height": 78.0487804878049,
+            "content": [
+              {
+                "type": "component",
+                "isClosable": true,
+                "componentName": "jimu grid",
+                "componentState": {
+                  "id": "32712098728619465-2"
+                },
+                "reorderEnabled": true,
+                "title": "jimu grid",
+                "id": "32712098728619465-2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "dijits": [
+    {
+      "id": "32712098728619465-1",
+      "type": "text",
+      "visible": true,
+      "config": {
+        "background": {
+          "backgroundColor": "#222222",
+          "alignment": {
+            "horizontal": "center",
+            "vertical": "middle"
+          },
+          "link": ""
+        },
+        "font": {
+          "font": {
+            "fontFamily": "Arial",
+            "bold": false,
+            "italic": false,
+            "underline": false
+          },
+          "fontSize": 16,
+          "textColor": "#fff"
+        },
+        "text": "60628 DEMOGRAPHICS BY RACE"
+      }
+    },
+    {
+      "id": "32712098728619465-2",
+      "type": "chart",
+      "visible": true,
+      "config": {
+        "data": {
+          "mode": "field",
+          "type": "pie",
+          "valueFields": [
+            "Population___Latinx",
+            "Population___Asian_Non_Latinx",
+            "Population___Black_Non_Latinx",
+            "Population___White_Non_Latinx"
+          ],
+          "operation": "sum",
+          "nullValue": true,
+          "sortOrder": {
+            "isAsc": true,
+            "isLabelAxis": "on"
+          },
+          "maxLabels": 100
+        },
+        "display": {
+          "backgroundColor": "#222222",
+          "seriesStyle": {
+            "type": "series",
+            "styles": [
+              {
+                "style": {
+                  "color": [
+                    "#ff8c00"
+                  ]
+                },
+                "name": "Population___Latinx",
+                "label": "Population - Latinx"
+              },
+              {
+                "style": {
+                  "color": [
+                    "#ff4500"
+                  ]
+                },
+                "name": "Population___Asian_Non_Latinx",
+                "label": "Population - Asian Non-Latinx"
+              },
+              {
+                "style": {
+                  "color": [
+                    "#6a5acd"
+                  ]
+                },
+                "name": "Population___Black_Non_Latinx",
+                "label": "Population - Black Non-Latinx"
+              },
+              {
+                "style": {
+                  "color": [
+                    "#90ee90"
+                  ]
+                },
+                "name": "Population___White_Non_Latinx",
+                "label": "Population - White Non-Latinx"
+              }
+            ]
+          },
+          "legend": {
+            "textStyle": {
+              "color": "#ffffff",
+              "fontSize": 6
+            },
+            "show": true
+          },
+          "dataLabel": {
+            "textStyle": {
+              "color": "#ffffff",
+              "fontSize": 12
+            },
+            "show": false
+          },
+          "innerRadius": 0
+        }
+      }
+    },
+    {
+      "id": "32712098728619465-3",
+      "type": "text",
+      "visible": false,
+      "config": {
+        "background": {
+          "backgroundColor": "#222222",
+          "alignment": {
+            "horizontal": "center",
+            "vertical": "top"
+          },
+          "link": ""
+        },
+        "font": {
+          "font": {
+            "fontFamily": "Arial",
+            "bold": false,
+            "italic": false,
+            "underline": false
+          },
+          "fontSize": 12,
+          "textColor": "#fff"
+        },
+        "text": "Description: additional information about this infographic."
+      }
+    }
+  ],
+  "name": "pie",
+  "wid": "32712098728619465",
+  "dataSource": {
+    "dataSourceType": "DATA_SOURCE_FROM_FRAMEWORK",
+    "name": "60628 Demographics",
+    "frameWorkDsId": "map~Join_Demographics_Covid_3_5198~5842758376966972",
+    "useSelection": false,
+    "filterByExtent": false
+  }
+}

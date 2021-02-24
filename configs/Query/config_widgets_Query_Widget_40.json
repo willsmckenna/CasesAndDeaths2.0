@@ -1,0 +1,1075 @@
+{
+  "hideLayersAfterWidgetClosed": true,
+  "labelTasks": "Tasks",
+  "labelResults": "Results",
+  "showFilterLabel": true,
+  "criteiraLabel": "Query criteria",
+  "spatialFilterLabel": "Spatial filters",
+  "queries": [
+    {
+      "url": "https://services7.arcgis.com/8kZv9DESIQ1hYuyJ/arcgis/rest/services/COVID_19_cases_tests_and_deaths_CSV/FeatureServer/0",
+      "name": "Search Case Numbers By Week",
+      "icon": {
+        "color": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "size": 18,
+        "angle": 0,
+        "xoffset": 0,
+        "yoffset": 0,
+        "type": "esriSMS",
+        "style": "esriSMSCircle",
+        "outline": {
+          "color": [
+            0,
+            0,
+            128,
+            255
+          ],
+          "width": 0.75,
+          "type": "esriSLS",
+          "style": "esriSLSSolid"
+        }
+      },
+      "filter": {
+        "logicalOperator": "AND",
+        "parts": [
+          {
+            "fieldObj": {
+              "name": "week_start",
+              "label": "week_start",
+              "dateFormat": "",
+              "shortType": "date",
+              "type": "esriFieldTypeDate"
+            },
+            "operator": "dateOperatorIsBetween",
+            "valueObj": {
+              "isValid": true,
+              "type": "value",
+              "value1": null,
+              "value2": null,
+              "virtualDate1": null,
+              "virtualDate2": null
+            },
+            "interactiveObj": {
+              "prompt": "Enter Date:",
+              "hint": "(Enter date range of over a week or more)",
+              "cascade": "none",
+              "virtualDates1": [
+                "custom"
+              ],
+              "virtualDates2": [
+                "custom"
+              ]
+            },
+            "caseSensitive": false
+          },
+          {
+            "fieldObj": {
+              "name": "zip_code",
+              "label": "zip_code",
+              "dateFormat": "",
+              "shortType": "number",
+              "type": "esriFieldTypeInteger"
+            },
+            "operator": "numberOperatorIs",
+            "valueObj": {
+              "isValid": true,
+              "type": "value",
+              "value": null
+            },
+            "interactiveObj": {
+              "prompt": "Enter Zip Code:",
+              "hint": "",
+              "cascade": "none"
+            },
+            "caseSensitive": false
+          }
+        ],
+        "expr": "",
+        "displaySQL": ""
+      },
+      "showSQL": false,
+      "spatialFilter": {
+        "currentMapExtent": null,
+        "drawing": null,
+        "useFeatures": null,
+        "fullLayerExtent": null
+      },
+      "popupInfo": {
+        "title": "Cases in {zip_code} from {week_start} to {week_end}",
+        "fieldInfos": [
+          {
+            "fieldName": "zip_code",
+            "label": "zip_code",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "week_number",
+            "label": "week_number",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "week_start",
+            "label": "week_start",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "dateFormat": "longMonthDayYear"
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "week_end",
+            "label": "week_end",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "dateFormat": "longMonthDayYear"
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "cases_weekly",
+            "label": "cases weekly",
+            "tooltip": "",
+            "visible": true,
+            "format": null,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "cases_cumulative",
+            "label": "cases_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "case_rate_weekly",
+            "label": "case rate weekly",
+            "tooltip": "",
+            "visible": true,
+            "format": null,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "case_rate_cumulative",
+            "label": "case_rate_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "tests_weekly",
+            "label": "tests_weekly",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "tests_cumulative",
+            "label": "tests_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "test_rate_weekly",
+            "label": "test_rate_weekly",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "test_rate_cumulative",
+            "label": "test_rate_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "percent_tested_positive_weekly",
+            "label": "percent_tested_positive_weekly",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "percent_tested_positive_cumulat",
+            "label": "percent_tested_positive_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "deaths_weekly",
+            "label": "deaths_weekly",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "deaths_cumulative",
+            "label": "deaths_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "death_rate_weekly",
+            "label": "death_rate_weekly",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "death_rate_cumulative",
+            "label": "death_rate_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "population",
+            "label": "population",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "row_id",
+            "label": "row_id",
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "zip_code_location",
+            "label": "zip_code_location",
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "ObjectId",
+            "label": "ObjectId",
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          }
+        ],
+        "description": null,
+        "showAttachments": false,
+        "mediaInfos": [],
+        "readFromWebMap": false
+      },
+      "orderByFields": [],
+      "useLayerSymbol": false,
+      "resultsSymbol": {
+        "color": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "size": 18,
+        "angle": 0,
+        "xoffset": 0,
+        "yoffset": 0,
+        "type": "esriSMS",
+        "style": "esriSMSCircle",
+        "outline": {
+          "color": [
+            0,
+            0,
+            128,
+            255
+          ],
+          "width": 0.75,
+          "type": "esriSLS",
+          "style": "esriSLSSolid"
+        }
+      },
+      "canModifySymbol": false,
+      "enableExport": false,
+      "defaultExpand": true,
+      "singleResultLayer": true,
+      "webMapLayerId": "091f7244-4b78-497d-8db3-ee4a95cbaf04",
+      "customResultName": true
+    },
+    {
+      "url": "https://services7.arcgis.com/8kZv9DESIQ1hYuyJ/arcgis/rest/services/COVID_19_cases_tests_and_deaths_CSV/FeatureServer/0",
+      "name": "Search Death Numbers By Week",
+      "icon": {
+        "color": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "size": 18,
+        "angle": 0,
+        "xoffset": 0,
+        "yoffset": 0,
+        "type": "esriSMS",
+        "style": "esriSMSCircle",
+        "outline": {
+          "color": [
+            0,
+            0,
+            128,
+            255
+          ],
+          "width": 0.75,
+          "type": "esriSLS",
+          "style": "esriSLSSolid"
+        }
+      },
+      "filter": {
+        "logicalOperator": "AND",
+        "parts": [
+          {
+            "fieldObj": {
+              "name": "week_start",
+              "label": "week_start",
+              "dateFormat": "",
+              "shortType": "date",
+              "type": "esriFieldTypeDate"
+            },
+            "operator": "dateOperatorIsBetween",
+            "valueObj": {
+              "isValid": true,
+              "type": "value",
+              "value1": null,
+              "value2": null,
+              "virtualDate1": null,
+              "virtualDate2": null
+            },
+            "interactiveObj": {
+              "prompt": "Enter Date:",
+              "hint": "(range must be of over a week or more)",
+              "cascade": "none",
+              "virtualDates1": [
+                "custom"
+              ],
+              "virtualDates2": [
+                "custom"
+              ]
+            },
+            "caseSensitive": false
+          },
+          {
+            "fieldObj": {
+              "name": "zip_code",
+              "label": "zip_code",
+              "dateFormat": "",
+              "shortType": "number",
+              "type": "esriFieldTypeInteger"
+            },
+            "operator": "numberOperatorIs",
+            "valueObj": {
+              "isValid": true,
+              "type": "value",
+              "value": null
+            },
+            "interactiveObj": {
+              "prompt": "Enter Zip Code:",
+              "hint": "",
+              "cascade": "none"
+            },
+            "caseSensitive": false
+          }
+        ],
+        "expr": "",
+        "displaySQL": ""
+      },
+      "showSQL": false,
+      "spatialFilter": {
+        "currentMapExtent": null,
+        "drawing": null,
+        "useFeatures": null,
+        "fullLayerExtent": null
+      },
+      "popupInfo": {
+        "title": "Case numbers in area code {zip_code} between {week_start} and {week_end}",
+        "fieldInfos": [
+          {
+            "fieldName": "zip_code",
+            "label": "zip_code",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "week_number",
+            "label": "week_number",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "week_start",
+            "label": "week_start",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "dateFormat": "longMonthDayYear"
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "week_end",
+            "label": "week_end",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "dateFormat": "longMonthDayYear"
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "cases_weekly",
+            "label": "cases_weekly",
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "cases_cumulative",
+            "label": "cases_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "case_rate_weekly",
+            "label": "case_rate_weekly",
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "case_rate_cumulative",
+            "label": "case_rate_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "tests_weekly",
+            "label": "tests_weekly",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "tests_cumulative",
+            "label": "tests_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "test_rate_weekly",
+            "label": "test_rate_weekly",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "test_rate_cumulative",
+            "label": "test_rate_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "percent_tested_positive_weekly",
+            "label": "percent_tested_positive_weekly",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "percent_tested_positive_cumulat",
+            "label": "percent_tested_positive_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "deaths_weekly",
+            "label": "deaths weekly",
+            "tooltip": "",
+            "visible": true,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "deaths_cumulative",
+            "label": "deaths_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "death_rate_weekly",
+            "label": "death rate weekly",
+            "tooltip": "",
+            "visible": true,
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "death_rate_cumulative",
+            "label": "death_rate_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "population",
+            "label": "population",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "row_id",
+            "label": "row_id",
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "zip_code_location",
+            "label": "zip_code_location",
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "ObjectId",
+            "label": "ObjectId",
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          }
+        ],
+        "description": null,
+        "showAttachments": false,
+        "mediaInfos": [],
+        "readFromWebMap": false
+      },
+      "orderByFields": [],
+      "useLayerSymbol": false,
+      "resultsSymbol": {
+        "color": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "size": 18,
+        "angle": 0,
+        "xoffset": 0,
+        "yoffset": 0,
+        "type": "esriSMS",
+        "style": "esriSMSCircle",
+        "outline": {
+          "color": [
+            0,
+            0,
+            128,
+            255
+          ],
+          "width": 0.75,
+          "type": "esriSLS",
+          "style": "esriSLSSolid"
+        }
+      },
+      "canModifySymbol": false,
+      "enableExport": false,
+      "defaultExpand": true,
+      "singleResultLayer": true,
+      "webMapLayerId": "091f7244-4b78-497d-8db3-ee4a95cbaf04",
+      "customResultName": true
+    },
+    {
+      "url": "",
+      "name": "Search Test Numbers By Week",
+      "icon": {
+        "color": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "size": 18,
+        "angle": 0,
+        "xoffset": 0,
+        "yoffset": 0,
+        "type": "esriSMS",
+        "style": "esriSMSCircle",
+        "outline": {
+          "color": [
+            0,
+            0,
+            128,
+            255
+          ],
+          "width": 0.75,
+          "type": "esriSLS",
+          "style": "esriSLSSolid"
+        }
+      },
+      "filter": {
+        "logicalOperator": "AND",
+        "parts": [
+          {
+            "fieldObj": {
+              "name": "week_start",
+              "label": "week_start",
+              "dateFormat": "",
+              "shortType": "date",
+              "type": "esriFieldTypeDate"
+            },
+            "operator": "dateOperatorIsBetween",
+            "valueObj": {
+              "isValid": true,
+              "type": "value",
+              "value1": null,
+              "value2": null,
+              "virtualDate1": null,
+              "virtualDate2": null
+            },
+            "interactiveObj": {
+              "prompt": "Enter Date:",
+              "hint": "(Range must be of over a week or more)",
+              "cascade": "none",
+              "virtualDates1": [
+                "custom"
+              ],
+              "virtualDates2": [
+                "custom"
+              ]
+            },
+            "caseSensitive": false
+          },
+          {
+            "fieldObj": {
+              "name": "zip_code",
+              "label": "zip_code",
+              "dateFormat": "",
+              "shortType": "number",
+              "type": "esriFieldTypeInteger"
+            },
+            "operator": "numberOperatorIs",
+            "valueObj": {
+              "isValid": true,
+              "type": "value",
+              "value": null
+            },
+            "interactiveObj": {
+              "prompt": "Enter Zip Code:",
+              "hint": "",
+              "cascade": "none"
+            },
+            "caseSensitive": false
+          }
+        ],
+        "expr": "",
+        "displaySQL": ""
+      },
+      "showSQL": true,
+      "spatialFilter": {
+        "currentMapExtent": null,
+        "drawing": null,
+        "useFeatures": null,
+        "fullLayerExtent": null
+      },
+      "popupInfo": {
+        "title": "Test numbers in {zip_code} between {week_start} and {week_end}",
+        "fieldInfos": [
+          {
+            "fieldName": "zip_code",
+            "label": "zip_code",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "week_number",
+            "label": "week_number",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "week_start",
+            "label": "week_start",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "dateFormat": "longMonthDayYear"
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "week_end",
+            "label": "week_end",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "dateFormat": "longMonthDayYear"
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "cases_weekly",
+            "label": "cases_weekly",
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "cases_cumulative",
+            "label": "cases_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "case_rate_weekly",
+            "label": "case_rate_weekly",
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "case_rate_cumulative",
+            "label": "case_rate_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "tests_weekly",
+            "label": "tests weekly",
+            "tooltip": "",
+            "visible": true,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "tests_cumulative",
+            "label": "tests_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "test_rate_weekly",
+            "label": "test rate weekly",
+            "tooltip": "",
+            "visible": true,
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "test_rate_cumulative",
+            "label": "test_rate_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "percent_tested_positive_weekly",
+            "label": "percent_tested_positive_weekly",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "percent_tested_positive_cumulat",
+            "label": "percent_tested_positive_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "deaths_weekly",
+            "label": "deaths_weekly",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "deaths_cumulative",
+            "label": "deaths_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "death_rate_weekly",
+            "label": "death_rate_weekly",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "death_rate_cumulative",
+            "label": "death_rate_cumulative",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "population",
+            "label": "population",
+            "tooltip": "",
+            "visible": false,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            },
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "row_id",
+            "label": "row_id",
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "zip_code_location",
+            "label": "zip_code_location",
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "ObjectId",
+            "label": "ObjectId",
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          }
+        ],
+        "description": null,
+        "showAttachments": false,
+        "mediaInfos": [],
+        "readFromWebMap": false
+      },
+      "orderByFields": [],
+      "useLayerSymbol": false,
+      "resultsSymbol": {
+        "color": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "size": 18,
+        "angle": 0,
+        "xoffset": 0,
+        "yoffset": 0,
+        "type": "esriSMS",
+        "style": "esriSMSCircle",
+        "outline": {
+          "color": [
+            0,
+            0,
+            128,
+            255
+          ],
+          "width": 0.75,
+          "type": "esriSLS",
+          "style": "esriSLSSolid"
+        }
+      },
+      "canModifySymbol": false,
+      "enableExport": false,
+      "defaultExpand": true,
+      "singleResultLayer": true,
+      "webMapLayerId": "091f7244-4b78-497d-8db3-ee4a95cbaf04",
+      "customResultName": true
+    }
+  ]
+}

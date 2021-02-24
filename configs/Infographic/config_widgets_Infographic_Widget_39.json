@@ -1,0 +1,200 @@
+{
+  "layout": {
+    "definition": [
+      {
+        "type": "column",
+        "isClosable": true,
+        "reorderEnabled": true,
+        "title": "",
+        "content": [
+          {
+            "type": "stack",
+            "isClosable": true,
+            "reorderEnabled": true,
+            "title": "",
+            "height": 30.22084544818889,
+            "activeItemIndex": 0,
+            "content": [
+              {
+                "type": "component",
+                "isClosable": true,
+                "componentName": "jimu grid",
+                "componentState": {
+                  "id": "08789651534353626-1"
+                },
+                "reorderEnabled": true,
+                "title": "jimu grid",
+                "id": "08789651534353626-1"
+              }
+            ]
+          },
+          {
+            "type": "stack",
+            "isClosable": true,
+            "reorderEnabled": true,
+            "title": "",
+            "height": 43.12982919534055,
+            "activeItemIndex": 0,
+            "content": [
+              {
+                "type": "component",
+                "isClosable": true,
+                "componentName": "jimu grid",
+                "componentState": {
+                  "id": "08789651534353626-3"
+                },
+                "reorderEnabled": true,
+                "title": "jimu grid",
+                "id": "08789651534353626-3"
+              }
+            ]
+          },
+          {
+            "type": "stack",
+            "isClosable": true,
+            "reorderEnabled": true,
+            "title": "",
+            "height": 26.649325356470584,
+            "activeItemIndex": 0,
+            "content": [
+              {
+                "type": "component",
+                "isClosable": true,
+                "componentName": "jimu grid",
+                "componentState": {
+                  "id": "08789651534353626-4"
+                },
+                "reorderEnabled": true,
+                "title": "jimu grid",
+                "id": "08789651534353626-4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "dijits": [
+    {
+      "id": "08789651534353626-1",
+      "type": "text",
+      "visible": true,
+      "config": {
+        "background": {
+          "backgroundColor": "#222222",
+          "alignment": {
+            "horizontal": "center",
+            "vertical": "middle"
+          },
+          "link": ""
+        },
+        "font": {
+          "font": {
+            "fontFamily": "Arial",
+            "bold": false,
+            "italic": false,
+            "underline": false
+          },
+          "fontSize": 16,
+          "textColor": "#fff"
+        },
+        "text": "TOTAL DEATHS"
+      }
+    },
+    {
+      "id": "08789651534353626-2",
+      "type": "image",
+      "visible": false,
+      "config": {
+        "background": {
+          "backgroundColor": "#222222",
+          "alignment": {
+            "horizontal": "center",
+            "vertical": "middle"
+          },
+          "link": ""
+        }
+      }
+    },
+    {
+      "id": "08789651534353626-3",
+      "type": "number",
+      "visible": true,
+      "config": {
+        "indicators": [],
+        "background": {
+          "backgroundColor": "#222222",
+          "alignment": {
+            "horizontal": "center",
+            "vertical": "middle"
+          },
+          "link": ""
+        },
+        "font": {
+          "font": {
+            "fontFamily": "Arial",
+            "bold": false,
+            "italic": false,
+            "underline": false
+          },
+          "fontSize": "36",
+          "textColor": "#59bad8"
+        },
+        "dataFormat": {
+          "unit": "none",
+          "decimalPlaces": 0,
+          "digitSeparator": true,
+          "prefix": "",
+          "suffix": ""
+        },
+        "statistics": [
+          {
+            "type": "value",
+            "config": {
+              "type": "stat",
+              "value": {
+                "type": "sum",
+                "field": "deaths_weekly"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "08789651534353626-4",
+      "type": "text",
+      "visible": true,
+      "config": {
+        "background": {
+          "backgroundColor": "#222222",
+          "alignment": {
+            "horizontal": "center",
+            "vertical": "middle"
+          },
+          "link": ""
+        },
+        "font": {
+          "font": {
+            "fontFamily": "Arial",
+            "bold": false,
+            "italic": false,
+            "underline": false
+          },
+          "fontSize": 12,
+          "textColor": "#fff"
+        },
+        "text": "City Of Chicago"
+      }
+    }
+  ],
+  "name": "number",
+  "wid": "08789651534353626",
+  "dataSource": {
+    "dataSourceType": "DATA_SOURCE_FEATURE_LAYER_FROM_MAP",
+    "name": "COVID-19 Cases, Tests, and Deaths- CSV",
+    "layerId": "091f7244-4b78-497d-8db3-ee4a95cbaf04",
+    "useSelection": true,
+    "filterByExtent": false
+  }
+}
