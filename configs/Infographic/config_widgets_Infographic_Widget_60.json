@@ -6,25 +6,26 @@
         "isClosable": true,
         "reorderEnabled": true,
         "title": "",
+        "width": 100,
         "content": [
           {
             "type": "stack",
             "isClosable": true,
             "reorderEnabled": true,
             "title": "",
-            "height": 24.44596190946584,
             "activeItemIndex": 0,
+            "height": 21.602787456445995,
             "content": [
               {
                 "type": "component",
                 "isClosable": true,
                 "componentName": "jimu grid",
                 "componentState": {
-                  "id": "43807230801665664-1"
+                  "id": "4235699302680489-1"
                 },
                 "reorderEnabled": true,
                 "title": "jimu grid",
-                "id": "43807230801665664-1"
+                "id": "4235699302680489-1"
               }
             ]
           },
@@ -33,40 +34,19 @@
             "isClosable": true,
             "reorderEnabled": true,
             "title": "",
-            "height": 40.22552953894182,
             "activeItemIndex": 0,
+            "height": 78.397212543554,
             "content": [
               {
                 "type": "component",
                 "isClosable": true,
                 "componentName": "jimu grid",
                 "componentState": {
-                  "id": "43807230801665664-3"
+                  "id": "4235699302680489-2"
                 },
                 "reorderEnabled": true,
                 "title": "jimu grid",
-                "id": "43807230801665664-3"
-              }
-            ]
-          },
-          {
-            "type": "stack",
-            "isClosable": true,
-            "reorderEnabled": true,
-            "title": "",
-            "height": 35.32850855159237,
-            "activeItemIndex": 0,
-            "content": [
-              {
-                "type": "component",
-                "isClosable": true,
-                "componentName": "jimu grid",
-                "componentState": {
-                  "id": "43807230801665664-4"
-                },
-                "reorderEnabled": true,
-                "title": "jimu grid",
-                "id": "43807230801665664-4"
+                "id": "4235699302680489-2"
               }
             ]
           }
@@ -76,7 +56,7 @@
   },
   "dijits": [
     {
-      "id": "43807230801665664-1",
+      "id": "4235699302680489-1",
       "type": "text",
       "visible": true,
       "config": {
@@ -98,79 +78,98 @@
           "fontSize": 16,
           "textColor": "#fff"
         },
-        "text": "TOTAL DEATHS"
+        "text": "TOTAL CASES BY GENDER"
       }
     },
     {
-      "id": "43807230801665664-2",
-      "type": "image",
+      "id": "4235699302680489-2",
+      "type": "chart",
+      "visible": true,
+      "config": {
+        "data": {
+          "mode": "field",
+          "type": "column",
+          "valueFields": [
+            "Cases___Female",
+            "Cases___Male"
+          ],
+          "operation": "sum",
+          "nullValue": true,
+          "sortOrder": {
+            "isAsc": true,
+            "isLabelAxis": "on"
+          }
+        },
+        "display": {
+          "backgroundColor": "#222222",
+          "seriesStyle": {
+            "type": "series",
+            "styles": [
+              {
+                "style": {
+                  "color": [
+                    "#087e92"
+                  ]
+                },
+                "name": "Cases___Female",
+                "label": "Cases - Female"
+              },
+              {
+                "style": {
+                  "color": [
+                    "#47bcf5"
+                  ]
+                },
+                "name": "Cases___Male",
+                "label": "Cases - Male"
+              }
+            ]
+          },
+          "legend": {
+            "textStyle": {
+              "color": "#ffffff",
+              "fontSize": 12
+            },
+            "show": false
+          },
+          "displayRange": "AUTO",
+          "xAxis": {
+            "textStyle": {
+              "color": "#ffffff",
+              "fontSize": 12
+            },
+            "show": true,
+            "format": {}
+          },
+          "yAxis": {
+            "textStyle": {
+              "color": "#ffffff",
+              "fontSize": 12
+            },
+            "show": true,
+            "format": {
+              "type": "float",
+              "digitSeparator": true
+            }
+          },
+          "tooltip": {
+            "confine": true,
+            "trigger": "axis"
+          },
+          "marks": {}
+        }
+      }
+    },
+    {
+      "id": "4235699302680489-3",
+      "type": "text",
       "visible": false,
       "config": {
         "background": {
           "backgroundColor": "#222222",
           "alignment": {
             "horizontal": "center",
-            "vertical": "middle"
-          },
-          "link": ""
-        }
-      }
-    },
-    {
-      "id": "43807230801665664-3",
-      "type": "number",
-      "visible": true,
-      "config": {
-        "indicators": [],
-        "background": {
-          "backgroundColor": "#222222",
-          "alignment": {
-            "horizontal": "center",
-            "vertical": "middle"
-          },
-          "link": ""
-        },
-        "font": {
-          "font": {
-            "fontFamily": "Arial",
-            "bold": false,
-            "italic": false,
-            "underline": false
-          },
-          "fontSize": "36",
-          "textColor": "#ff0000"
-        },
-        "dataFormat": {
-          "unit": "none",
-          "decimalPlaces": 0,
-          "digitSeparator": true,
-          "prefix": "",
-          "suffix": ""
-        },
-        "statistics": [
-          {
-            "type": "value",
-            "config": {
-              "type": "stat",
-              "value": {
-                "type": "sum",
-                "field": "Deaths___Total"
-              }
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "43807230801665664-4",
-      "type": "text",
-      "visible": true,
-      "config": {
-        "background": {
-          "backgroundColor": "#222222",
-          "alignment": {
-            "horizontal": "center",
-            "vertical": "middle"
+            "vertical": "top"
           },
           "link": ""
         },
@@ -184,12 +183,12 @@
           "fontSize": 12,
           "textColor": "#fff"
         },
-        "text": "City Of Chicago"
+        "text": "Description: additional information about this infographic."
       }
     }
   ],
-  "name": "number",
-  "wid": "43807230801665664",
+  "name": "column",
+  "wid": "4235699302680489",
   "dataSource": {
     "dataSourceType": "DATA_SOURCE_FROM_FRAMEWORK",
     "name": "COVID_19_cases_deaths_and_hospitalizations_and_related_demographic_data - COVID_19_cases_deaths_and_hospitalizations_and_related_demographic_data",

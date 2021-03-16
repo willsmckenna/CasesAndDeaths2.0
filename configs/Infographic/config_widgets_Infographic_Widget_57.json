@@ -14,18 +14,18 @@
             "reorderEnabled": true,
             "title": "",
             "activeItemIndex": 0,
-            "height": 20.905923344947734,
+            "height": 21.254355400696863,
             "content": [
               {
                 "type": "component",
                 "isClosable": true,
                 "componentName": "jimu grid",
                 "componentState": {
-                  "id": "21496196978496052-1"
+                  "id": "14811993018496183-1"
                 },
                 "reorderEnabled": true,
                 "title": "jimu grid",
-                "id": "21496196978496052-1"
+                "id": "14811993018496183-1"
               }
             ]
           },
@@ -35,18 +35,18 @@
             "reorderEnabled": true,
             "title": "",
             "activeItemIndex": 0,
-            "height": 79.09407665505226,
+            "height": 78.74564459930313,
             "content": [
               {
                 "type": "component",
                 "isClosable": true,
                 "componentName": "jimu grid",
                 "componentState": {
-                  "id": "21496196978496052-2"
+                  "id": "14811993018496183-2"
                 },
                 "reorderEnabled": true,
                 "title": "jimu grid",
-                "id": "21496196978496052-2"
+                "id": "14811993018496183-2"
               }
             ]
           }
@@ -56,7 +56,7 @@
   },
   "dijits": [
     {
-      "id": "21496196978496052-1",
+      "id": "14811993018496183-1",
       "type": "text",
       "visible": true,
       "config": {
@@ -78,30 +78,28 @@
           "fontSize": 16,
           "textColor": "#fff"
         },
-        "text": "TOTAL CASES OVER TIME"
+        "text": "TOTAL DEATHS BY RACE"
       }
     },
     {
-      "id": "21496196978496052-2",
+      "id": "14811993018496183-2",
       "type": "chart",
       "visible": true,
       "config": {
         "data": {
-          "mode": "category",
-          "type": "line",
-          "clusterField": "Date",
-          "dateConfig": {
-            "minPeriod": "month",
-            "isNeedFilled": false
-          },
+          "mode": "field",
+          "type": "column",
           "valueFields": [
-            "Cases___Total"
+            "Deaths___Latinx",
+            "Deaths___Asian_Non_Latinx",
+            "Deaths___Black_Non_Latinx",
+            "Deaths___White_Non_Latinx",
+            "Deaths___Other_Race_Non_Latinx"
           ],
           "operation": "sum",
-          "nullValue": false,
+          "nullValue": true,
           "sortOrder": {
             "isAsc": true,
-            "field": "Cases___Total",
             "isLabelAxis": "on"
           }
         },
@@ -113,11 +111,47 @@
               {
                 "style": {
                   "color": [
-                    "#ffa500"
+                    "#ff8c00"
                   ]
                 },
-                "name": "Cases___Total",
-                "label": "Cases - Total"
+                "name": "Deaths___Latinx",
+                "label": "Deaths - Latinx"
+              },
+              {
+                "style": {
+                  "color": [
+                    "#fbe66a"
+                  ]
+                },
+                "name": "Deaths___Asian_Non_Latinx",
+                "label": "Deaths - Asian Non-Latinx"
+              },
+              {
+                "style": {
+                  "color": [
+                    "#6a5acd"
+                  ]
+                },
+                "name": "Deaths___Black_Non_Latinx",
+                "label": "Deaths - Black Non-Latinx"
+              },
+              {
+                "style": {
+                  "color": [
+                    "#8a2be2"
+                  ]
+                },
+                "name": "Deaths___White_Non_Latinx",
+                "label": "Deaths - White Non-Latinx"
+              },
+              {
+                "style": {
+                  "color": [
+                    "#008b8b"
+                  ]
+                },
+                "name": "Deaths___Other_Race_Non_Latinx",
+                "label": "Deaths - Other Race Non-Latinx"
               }
             ]
           },
@@ -134,7 +168,7 @@
               "color": "#ffffff",
               "fontSize": 12
             },
-            "show": true,
+            "show": false,
             "format": {}
           },
           "yAxis": {
@@ -157,7 +191,7 @@
       }
     },
     {
-      "id": "21496196978496052-3",
+      "id": "14811993018496183-3",
       "type": "text",
       "visible": false,
       "config": {
@@ -183,8 +217,8 @@
       }
     }
   ],
-  "name": "line",
-  "wid": "21496196978496052",
+  "name": "column",
+  "wid": "14811993018496183",
   "dataSource": {
     "dataSourceType": "DATA_SOURCE_FROM_FRAMEWORK",
     "name": "COVID_19_cases_deaths_and_hospitalizations_and_related_demographic_data - COVID_19_cases_deaths_and_hospitalizations_and_related_demographic_data",

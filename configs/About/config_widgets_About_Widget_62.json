@@ -1,0 +1,5 @@
+{
+  "about": {
+    "aboutContent": "<font face=\"Arial\" size=\"5\">Disparities Widget</font><div><font face=\"Arial\"><font size=\"2\">In this widget you will find the following:</font><br /></font><div><ul><li><font face=\"Arial\" size=\"3\">Total Cases By Race</font></li><li><font face=\"Arial\" size=\"3\">Total Deaths By Race</font></li><li><font face=\"Arial\" size=\"3\">Total Cases By Age</font></li><li><font face=\"Arial\" size=\"3\">Total Deaths By Age</font></li><li><font face=\"Arial\" size=\"3\">Total Cases By Gender</font></li><li><font face=\"Arial\" size=\"3\">Total Deaths By Gender</font></li></ul></div></div>"
+  }
+}

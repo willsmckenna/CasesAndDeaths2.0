@@ -12,7 +12,7 @@
             "isClosable": true,
             "reorderEnabled": true,
             "title": "",
-            "height": 27.61941363233112,
+            "height": 33.29949220719437,
             "activeItemIndex": 0,
             "content": [
               {
@@ -20,11 +20,11 @@
                 "isClosable": true,
                 "componentName": "jimu grid",
                 "componentState": {
-                  "id": "5659462716133681-1"
+                  "id": "7748428962843084-1"
                 },
                 "reorderEnabled": true,
                 "title": "jimu grid",
-                "id": "5659462716133681-1"
+                "id": "7748428962843084-1"
               }
             ]
           },
@@ -33,40 +33,39 @@
             "isClosable": true,
             "reorderEnabled": true,
             "title": "",
-            "height": 45.7992808333592,
-            "activeItemIndex": 0,
+            "height": 33.33333333333333,
             "content": [
               {
-                "type": "component",
-                "isClosable": true,
-                "componentName": "jimu grid",
-                "componentState": {
-                  "id": "5659462716133681-3"
-                },
-                "reorderEnabled": true,
-                "title": "jimu grid",
-                "id": "5659462716133681-3"
-              }
-            ]
-          },
-          {
-            "type": "stack",
-            "height": 26.5813055343097,
-            "isClosable": true,
-            "reorderEnabled": true,
-            "title": "",
-            "activeItemIndex": 0,
-            "content": [
-              {
-                "id": "5659462716133681-4",
+                "id": "7748428962843084-3",
                 "type": "component",
                 "componentName": "jimu grid",
                 "componentState": {
-                  "id": "5659462716133681-4"
+                  "id": "7748428962843084-3"
                 },
                 "isClosable": true,
                 "reorderEnabled": true,
                 "title": "jimu grid"
+              }
+            ]
+          },
+          {
+            "type": "stack",
+            "isClosable": true,
+            "reorderEnabled": true,
+            "title": "",
+            "height": 33.36717445947232,
+            "activeItemIndex": 0,
+            "content": [
+              {
+                "type": "component",
+                "isClosable": true,
+                "componentName": "jimu grid",
+                "componentState": {
+                  "id": "7748428962843084-4"
+                },
+                "reorderEnabled": true,
+                "title": "jimu grid",
+                "id": "7748428962843084-4"
               }
             ]
           }
@@ -76,7 +75,7 @@
   },
   "dijits": [
     {
-      "id": "5659462716133681-1",
+      "id": "7748428962843084-1",
       "type": "text",
       "visible": true,
       "config": {
@@ -95,14 +94,14 @@
             "italic": false,
             "underline": false
           },
-          "fontSize": "14",
+          "fontSize": 16,
           "textColor": "#fff"
         },
         "text": "TOTAL CASES"
       }
     },
     {
-      "id": "5659462716133681-2",
+      "id": "7748428962843084-2",
       "type": "image",
       "visible": false,
       "config": {
@@ -117,7 +116,7 @@
       }
     },
     {
-      "id": "5659462716133681-3",
+      "id": "7748428962843084-3",
       "type": "number",
       "visible": true,
       "config": {
@@ -154,7 +153,7 @@
               "type": "stat",
               "value": {
                 "type": "sum",
-                "field": "deaths_weekly"
+                "field": "Cases___Total"
               }
             }
           }
@@ -162,7 +161,7 @@
       }
     },
     {
-      "id": "5659462716133681-4",
+      "id": "7748428962843084-4",
       "type": "text",
       "visible": true,
       "config": {
@@ -181,7 +180,7 @@
             "italic": false,
             "underline": false
           },
-          "fontSize": "12",
+          "fontSize": 12,
           "textColor": "#fff"
         },
         "text": "City Of Chicago"
@@ -189,12 +188,12 @@
     }
   ],
   "name": "number",
-  "wid": "5659462716133681",
+  "wid": "7748428962843084",
   "dataSource": {
-    "dataSourceType": "DATA_SOURCE_FEATURE_LAYER_FROM_MAP",
-    "name": "COVID-19 Cases, Tests, and Deaths- CSV",
-    "layerId": "091f7244-4b78-497d-8db3-ee4a95cbaf04",
-    "useSelection": true,
+    "dataSourceType": "DATA_SOURCE_FROM_FRAMEWORK",
+    "name": "COVID_19_cases_deaths_and_hospitalizations_and_related_demographic_data - COVID_19_cases_deaths_and_hospitalizations_and_related_demographic_data",
+    "frameWorkDsId": "map~COVID_19_cases_deaths_and_hospitalizations_and_related_demographic_data_1417~466549208257121",
+    "useSelection": false,
     "filterByExtent": false
   }
 }

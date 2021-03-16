@@ -14,18 +14,18 @@
             "reorderEnabled": true,
             "title": "",
             "activeItemIndex": 0,
-            "height": 27.97150164413592,
+            "height": 21.254355400696863,
             "content": [
               {
                 "type": "component",
                 "isClosable": true,
                 "componentName": "jimu grid",
                 "componentState": {
-                  "id": "7380884325171202-1"
+                  "id": "4447200577249142-1"
                 },
                 "reorderEnabled": true,
                 "title": "jimu grid",
-                "id": "7380884325171202-1"
+                "id": "4447200577249142-1"
               }
             ]
           },
@@ -35,18 +35,18 @@
             "reorderEnabled": true,
             "title": "",
             "activeItemIndex": 0,
-            "height": 72.0284983558641,
+            "height": 78.74564459930313,
             "content": [
               {
                 "type": "component",
                 "isClosable": true,
                 "componentName": "jimu grid",
                 "componentState": {
-                  "id": "7380884325171202-2"
+                  "id": "4447200577249142-2"
                 },
                 "reorderEnabled": true,
                 "title": "jimu grid",
-                "id": "7380884325171202-2"
+                "id": "4447200577249142-2"
               }
             ]
           }
@@ -56,7 +56,7 @@
   },
   "dijits": [
     {
-      "id": "7380884325171202-1",
+      "id": "4447200577249142-1",
       "type": "text",
       "visible": true,
       "config": {
@@ -78,30 +78,33 @@
           "fontSize": 16,
           "textColor": "#fff"
         },
-        "text": "60639 DEMOGRAPHICS BY RACE"
+        "text": "TOTAL CASES BY AGE"
       }
     },
     {
-      "id": "7380884325171202-2",
+      "id": "4447200577249142-2",
       "type": "chart",
       "visible": true,
       "config": {
         "data": {
           "mode": "field",
-          "type": "pie",
+          "type": "column",
           "valueFields": [
-            "Population___Latinx",
-            "Population___Asian_Non_Latinx",
-            "Population___Black_Non_Latinx",
-            "Population___White_Non_Latinx"
+            "Cases___Age_0_17",
+            "Cases___Age_18_29",
+            "Cases___Age_30_39",
+            "Cases___Age_40_49",
+            "Cases___Age_50_59",
+            "Cases___Age_60_69",
+            "Cases___Age_70_79",
+            "Cases____Age_80_"
           ],
           "operation": "sum",
           "nullValue": true,
           "sortOrder": {
             "isAsc": true,
             "isLabelAxis": "on"
-          },
-          "maxLabels": 100
+          }
         },
         "display": {
           "backgroundColor": "#222222",
@@ -111,38 +114,74 @@
               {
                 "style": {
                   "color": [
-                    "#ff8c00"
+                    "#087e92"
                   ]
                 },
-                "name": "Population___Latinx",
-                "label": "Population - Latinx"
+                "name": "Cases___Age_0_17",
+                "label": "Cases - Age 0-17"
               },
               {
                 "style": {
                   "color": [
-                    "#ba55d3"
+                    "#47bcf5"
                   ]
                 },
-                "name": "Population___Black_Non_Latinx",
-                "label": "Population - Black Non-Latinx"
+                "name": "Cases___Age_18_29",
+                "label": "Cases - Age 18-29"
               },
               {
                 "style": {
                   "color": [
-                    "#ff4500"
+                    "#fbe66a"
                   ]
                 },
-                "name": "Population___Asian_Non_Latinx",
-                "label": "Population - Asian Non-Latinx"
+                "name": "Cases___Age_30_39",
+                "label": "Cases - Age 30-39"
               },
               {
                 "style": {
                   "color": [
-                    "#32cd32"
+                    "#f29157"
                   ]
                 },
-                "name": "Population___White_Non_Latinx",
-                "label": "Population - White Non-Latinx"
+                "name": "Cases___Age_40_49",
+                "label": "Cases - Age 40-49"
+              },
+              {
+                "style": {
+                  "color": [
+                    "#c8501d"
+                  ]
+                },
+                "name": "Cases___Age_50_59",
+                "label": "Cases - Age 50-59"
+              },
+              {
+                "style": {
+                  "color": [
+                    "#2db7c6"
+                  ]
+                },
+                "name": "Cases___Age_60_69",
+                "label": "Cases - Age 60-69"
+              },
+              {
+                "style": {
+                  "color": [
+                    "#c4eef6"
+                  ]
+                },
+                "name": "Cases___Age_70_79",
+                "label": "Cases - Age 70-79"
+              },
+              {
+                "style": {
+                  "color": [
+                    "#68d2e0"
+                  ]
+                },
+                "name": "Cases____Age_80_",
+                "label": "Cases -  Age 80+"
               }
             ]
           },
@@ -153,19 +192,36 @@
             },
             "show": false
           },
-          "dataLabel": {
+          "displayRange": "ALL",
+          "xAxis": {
             "textStyle": {
               "color": "#ffffff",
               "fontSize": 12
             },
-            "show": false
+            "show": false,
+            "format": {}
           },
-          "innerRadius": 0
+          "yAxis": {
+            "textStyle": {
+              "color": "#ffffff",
+              "fontSize": 12
+            },
+            "show": true,
+            "format": {
+              "type": "float",
+              "digitSeparator": true
+            }
+          },
+          "tooltip": {
+            "confine": true,
+            "trigger": "axis"
+          },
+          "marks": {}
         }
       }
     },
     {
-      "id": "7380884325171202-3",
+      "id": "4447200577249142-3",
       "type": "text",
       "visible": false,
       "config": {
@@ -191,12 +247,12 @@
       }
     }
   ],
-  "name": "pie",
-  "wid": "7380884325171202",
+  "name": "column",
+  "wid": "4447200577249142",
   "dataSource": {
     "dataSourceType": "DATA_SOURCE_FROM_FRAMEWORK",
-    "name": "60639 Demographics",
-    "frameWorkDsId": "map~Join_Demographics_Covid_3_5198~58740500019882",
+    "name": "COVID_19_cases_deaths_and_hospitalizations_and_related_demographic_data - COVID_19_cases_deaths_and_hospitalizations_and_related_demographic_data",
+    "frameWorkDsId": "map~COVID_19_cases_deaths_and_hospitalizations_and_related_demographic_data_1417~466549208257121",
     "useSelection": false,
     "filterByExtent": false
   }
