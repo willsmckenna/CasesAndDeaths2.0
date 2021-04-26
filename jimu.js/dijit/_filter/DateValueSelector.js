@@ -42,7 +42,7 @@ define([
 
       //events:
       //change
-
+      
       postMixInProperties: function(){
         this.inherited(arguments);
         this.nls = window.jimuNls.filterBuilder;
@@ -101,14 +101,19 @@ define([
             this.dateTypeSelect.addOption(option);
           }
         }));
+       
+        this.dateTypeSelect.set('value', 'custom', false);
+        
         this.dateTypeSelect.startup();
-
+       
         this.own(on(html.byId('main-page'), 'click', lang.hitch(this, function(){
           this.hideDateTimePopup();
         })));
 
         this.own(aspect.before(this.dateTypeSelect, 'openDropDown', lang.hitch(this, function(){
-          this.hideDateTimePopup();
+          this.showDateTimePopup();
+          this.dateTypeSelect.hide();
+
           if(this.dateTypeSelect.getValue() === 'custom' && this.dateTimeObj && this.dateTimeObj.value){
             this.dateTypeSelect.textDirNode.innerText = this.dateTimeObj.value;
           }
@@ -122,6 +127,7 @@ define([
             // this.dateTimePopup.close();
             // this.dateTimePopup = null;
           }
+
         })));
 
         this.own(aspect.after(this.dateTypeSelect, 'closeDropDown', lang.hitch(this, function(){
@@ -142,7 +148,7 @@ define([
             }
           }), 200);
         })));
-
+        
         this.own(aspect.after(this.dateTypeSelect.dropDown, 'onItemClick', lang.hitch(this, function(item){
           if(item && item.option.value === 'custom'){
             this.showDateTimePopup();
@@ -477,3 +483,14 @@ define([
 
     });
   });
+
+function getMethods(obj)
+{
+    var res = [];
+    for(var m in obj) {
+        if(typeof obj[m] == "function") {
+            res.push(m)
+        }
+    }
+    console.log(res);
+}

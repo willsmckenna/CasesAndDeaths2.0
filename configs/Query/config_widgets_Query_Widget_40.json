@@ -7,7 +7,7 @@
   "spatialFilterLabel": "Spatial filters",
   "queries": [
     {
-      "url": "https://services7.arcgis.com/8kZv9DESIQ1hYuyJ/arcgis/rest/services/COVID_19_cases_tests_and_deaths_CSV/FeatureServer/0",
+      "url": "",
       "name": "Search Case Numbers By Week",
       "icon": {
         "color": [
@@ -41,7 +41,7 @@
             "fieldObj": {
               "name": "week_start",
               "label": "week_start",
-              "dateFormat": "",
+              "dateFormat": "shortDateShortTime",
               "shortType": "date",
               "type": "esriFieldTypeDate"
             },
@@ -55,8 +55,8 @@
               "virtualDate2": null
             },
             "interactiveObj": {
-              "prompt": "Enter Date:",
-              "hint": "(Enter date range of over a week or more)",
+              "prompt": "Enter dates:",
+              "hint": "(Must be of over a week or more)",
               "cascade": "none",
               "virtualDates1": [
                 "custom"
@@ -68,25 +68,93 @@
             "caseSensitive": false
           },
           {
-            "fieldObj": {
-              "name": "zip_code",
-              "label": "zip_code",
-              "dateFormat": "",
-              "shortType": "number",
-              "type": "esriFieldTypeInteger"
-            },
-            "operator": "numberOperatorIs",
-            "valueObj": {
-              "isValid": true,
-              "type": "value",
-              "value": null
-            },
-            "interactiveObj": {
-              "prompt": "Enter Zip Code:",
-              "hint": "",
-              "cascade": "none"
-            },
-            "caseSensitive": false
+            "logicalOperator": "OR",
+            "parts": [
+              {
+                "fieldObj": {
+                  "name": "zip_code",
+                  "label": "zip_code",
+                  "dateFormat": "",
+                  "shortType": "string",
+                  "type": "esriFieldTypeString"
+                },
+                "operator": "stringOperatorIs",
+                "valueObj": {
+                  "isValid": true,
+                  "type": "value",
+                  "value": null
+                },
+                "interactiveObj": {
+                  "prompt": "Enter Zip Code:",
+                  "hint": "",
+                  "cascade": "none"
+                },
+                "caseSensitive": false
+              },
+              {
+                "fieldObj": {
+                  "name": "zip_code",
+                  "label": "zip_code",
+                  "dateFormat": "",
+                  "shortType": "string",
+                  "type": "esriFieldTypeString"
+                },
+                "operator": "stringOperatorIs",
+                "valueObj": {
+                  "isValid": true,
+                  "type": "value",
+                  "value": null
+                },
+                "interactiveObj": {
+                  "prompt": "(Optional) Additional Zip Code:",
+                  "hint": "",
+                  "cascade": "none"
+                },
+                "caseSensitive": false
+              },
+              {
+                "fieldObj": {
+                  "name": "zip_code",
+                  "label": "zip_code",
+                  "dateFormat": "",
+                  "shortType": "string",
+                  "type": "esriFieldTypeString"
+                },
+                "operator": "stringOperatorIs",
+                "valueObj": {
+                  "isValid": true,
+                  "type": "value",
+                  "value": null
+                },
+                "interactiveObj": {
+                  "prompt": "(Optional) Additional Zip Code:",
+                  "hint": "",
+                  "cascade": "none"
+                },
+                "caseSensitive": false
+              },
+              {
+                "fieldObj": {
+                  "name": "zip_code",
+                  "label": "zip_code",
+                  "dateFormat": "",
+                  "shortType": "string",
+                  "type": "esriFieldTypeString"
+                },
+                "operator": "stringOperatorIs",
+                "valueObj": {
+                  "isValid": true,
+                  "type": "value",
+                  "value": null
+                },
+                "interactiveObj": {
+                  "prompt": "(Optional) Additional Zip Code:",
+                  "hint": "",
+                  "cascade": "none"
+                },
+                "caseSensitive": false
+              }
+            ]
           }
         ],
         "expr": "",
@@ -100,17 +168,14 @@
         "fullLayerExtent": null
       },
       "popupInfo": {
-        "title": "Cases in {zip_code} from {week_start} to {week_end}",
+        "title": "Cases in {zip_code} between dates {week_start} and {week_end}",
         "fieldInfos": [
           {
             "fieldName": "zip_code",
             "label": "zip_code",
             "tooltip": "",
             "visible": false,
-            "format": {
-              "places": 0,
-              "digitSeparator": true
-            },
+            "format": null,
             "stringFieldOption": "textbox"
           },
           {
@@ -146,7 +211,7 @@
           },
           {
             "fieldName": "cases_weekly",
-            "label": "cases weekly",
+            "label": "Number of Cases in the Week",
             "tooltip": "",
             "visible": true,
             "format": null,
@@ -154,15 +219,15 @@
           },
           {
             "fieldName": "cases_cumulative",
-            "label": "cases_cumulative",
+            "label": "Total Number of Cases Through the Week",
             "tooltip": "",
-            "visible": false,
+            "visible": true,
             "format": null,
             "stringFieldOption": "textbox"
           },
           {
             "fieldName": "case_rate_weekly",
-            "label": "case rate weekly",
+            "label": "Case Rate Per 100,000 Population in the Week",
             "tooltip": "",
             "visible": true,
             "format": null,
@@ -355,14 +420,14 @@
         }
       },
       "canModifySymbol": false,
-      "enableExport": false,
+      "enableExport": true,
       "defaultExpand": true,
       "singleResultLayer": true,
-      "webMapLayerId": "091f7244-4b78-497d-8db3-ee4a95cbaf04",
-      "customResultName": true
+      "webMapLayerId": "Cases_Tests_Deaths_Final_8267",
+      "customResultName": false
     },
     {
-      "url": "https://services7.arcgis.com/8kZv9DESIQ1hYuyJ/arcgis/rest/services/COVID_19_cases_tests_and_deaths_CSV/FeatureServer/0",
+      "url": "https://services7.arcgis.com/8kZv9DESIQ1hYuyJ/arcgis/rest/services/Cases_Tests_Deaths_Final/FeatureServer/0",
       "name": "Search Death Numbers By Week",
       "icon": {
         "color": [
@@ -396,7 +461,7 @@
             "fieldObj": {
               "name": "week_start",
               "label": "week_start",
-              "dateFormat": "",
+              "dateFormat": "shortDateShortTime",
               "shortType": "date",
               "type": "esriFieldTypeDate"
             },
@@ -410,8 +475,8 @@
               "virtualDate2": null
             },
             "interactiveObj": {
-              "prompt": "Enter Date:",
-              "hint": "(range must be of over a week or more)",
+              "prompt": "Enter date:",
+              "hint": "(Range must be of a week or more)",
               "cascade": "none",
               "virtualDates1": [
                 "custom"
@@ -423,29 +488,97 @@
             "caseSensitive": false
           },
           {
-            "fieldObj": {
-              "name": "zip_code",
-              "label": "zip_code",
-              "dateFormat": "",
-              "shortType": "number",
-              "type": "esriFieldTypeInteger"
-            },
-            "operator": "numberOperatorIs",
-            "valueObj": {
-              "isValid": true,
-              "type": "value",
-              "value": null
-            },
-            "interactiveObj": {
-              "prompt": "Enter Zip Code:",
-              "hint": "",
-              "cascade": "none"
-            },
-            "caseSensitive": false
+            "logicalOperator": "OR",
+            "parts": [
+              {
+                "fieldObj": {
+                  "name": "zip_code",
+                  "label": "zip_code",
+                  "dateFormat": "",
+                  "shortType": "string",
+                  "type": "esriFieldTypeString"
+                },
+                "operator": "stringOperatorIs",
+                "valueObj": {
+                  "isValid": true,
+                  "type": "value",
+                  "value": null
+                },
+                "interactiveObj": {
+                  "prompt": "Enter Zip Code:",
+                  "hint": "",
+                  "cascade": "none"
+                },
+                "caseSensitive": false
+              },
+              {
+                "fieldObj": {
+                  "name": "zip_code",
+                  "label": "zip_code",
+                  "dateFormat": "",
+                  "shortType": "string",
+                  "type": "esriFieldTypeString"
+                },
+                "operator": "stringOperatorIs",
+                "valueObj": {
+                  "isValid": true,
+                  "type": "value",
+                  "value": null
+                },
+                "interactiveObj": {
+                  "prompt": "(Optional) Additional Zip Code:",
+                  "hint": "",
+                  "cascade": "none"
+                },
+                "caseSensitive": false
+              },
+              {
+                "fieldObj": {
+                  "name": "zip_code",
+                  "label": "zip_code",
+                  "dateFormat": "",
+                  "shortType": "string",
+                  "type": "esriFieldTypeString"
+                },
+                "operator": "stringOperatorIs",
+                "valueObj": {
+                  "isValid": true,
+                  "type": "value",
+                  "value": null
+                },
+                "interactiveObj": {
+                  "prompt": "(Optional) Additional Zip Code:",
+                  "hint": "",
+                  "cascade": "none"
+                },
+                "caseSensitive": false
+              },
+              {
+                "fieldObj": {
+                  "name": "zip_code",
+                  "label": "zip_code",
+                  "dateFormat": "",
+                  "shortType": "string",
+                  "type": "esriFieldTypeString"
+                },
+                "operator": "stringOperatorIs",
+                "valueObj": {
+                  "isValid": true,
+                  "type": "value",
+                  "value": null
+                },
+                "interactiveObj": {
+                  "prompt": "(Optional) Additional Zip Code:",
+                  "hint": "",
+                  "cascade": "none"
+                },
+                "caseSensitive": false
+              }
+            ]
           }
         ],
-        "expr": "",
-        "displaySQL": ""
+        "displaySQL": "",
+        "expr": ""
       },
       "showSQL": false,
       "spatialFilter": {
@@ -455,17 +588,14 @@
         "fullLayerExtent": null
       },
       "popupInfo": {
-        "title": "Case numbers in area code {zip_code} between {week_start} and {week_end}",
+        "title": "Deaths in {zip_code} between the dates {week_start} and {week_end}",
         "fieldInfos": [
           {
             "fieldName": "zip_code",
             "label": "zip_code",
             "tooltip": "",
             "visible": false,
-            "format": {
-              "places": 0,
-              "digitSeparator": true
-            },
+            "format": null,
             "stringFieldOption": "textbox"
           },
           {
@@ -599,7 +729,7 @@
           },
           {
             "fieldName": "deaths_weekly",
-            "label": "deaths weekly",
+            "label": "Number of Deaths in the Week",
             "tooltip": "",
             "visible": true,
             "format": {
@@ -610,9 +740,9 @@
           },
           {
             "fieldName": "deaths_cumulative",
-            "label": "deaths_cumulative",
+            "label": "Total Number of Deaths Through the Week",
             "tooltip": "",
-            "visible": false,
+            "visible": true,
             "format": {
               "places": 0,
               "digitSeparator": true
@@ -621,7 +751,7 @@
           },
           {
             "fieldName": "death_rate_weekly",
-            "label": "death rate weekly",
+            "label": "Death Rate Per 100,000 Population in the Week",
             "tooltip": "",
             "visible": true,
             "format": {
@@ -710,14 +840,14 @@
         }
       },
       "canModifySymbol": false,
-      "enableExport": false,
+      "enableExport": true,
       "defaultExpand": true,
       "singleResultLayer": true,
-      "webMapLayerId": "091f7244-4b78-497d-8db3-ee4a95cbaf04",
-      "customResultName": true
+      "webMapLayerId": "Cases_Tests_Deaths_Final_8267",
+      "customResultName": false
     },
     {
-      "url": "",
+      "url": "https://services7.arcgis.com/8kZv9DESIQ1hYuyJ/arcgis/rest/services/Cases_Tests_Deaths_Final/FeatureServer/0",
       "name": "Search Test Numbers By Week",
       "icon": {
         "color": [
@@ -751,7 +881,7 @@
             "fieldObj": {
               "name": "week_start",
               "label": "week_start",
-              "dateFormat": "",
+              "dateFormat": "shortDateShortTime",
               "shortType": "date",
               "type": "esriFieldTypeDate"
             },
@@ -765,8 +895,8 @@
               "virtualDate2": null
             },
             "interactiveObj": {
-              "prompt": "Enter Date:",
-              "hint": "(Range must be of over a week or more)",
+              "prompt": "Enter date:",
+              "hint": "(Range must be over a week or more)",
               "cascade": "none",
               "virtualDates1": [
                 "custom"
@@ -778,31 +908,99 @@
             "caseSensitive": false
           },
           {
+            "logicalOperator": "OR",
+            "parts": [
+              {
+                "fieldObj": {
+                  "name": "zip_code",
+                  "label": "zip_code",
+                  "dateFormat": "",
+                  "shortType": "string",
+                  "type": "esriFieldTypeString"
+                },
+                "operator": "stringOperatorIs",
+                "valueObj": {
+                  "isValid": true,
+                  "type": "value",
+                  "value": null
+                },
+                "interactiveObj": {
+                  "prompt": "Enter Zip Code:",
+                  "hint": "",
+                  "cascade": "none"
+                },
+                "caseSensitive": false
+              },
+              {
+                "fieldObj": {
+                  "name": "zip_code",
+                  "label": "zip_code",
+                  "dateFormat": "",
+                  "shortType": "string",
+                  "type": "esriFieldTypeString"
+                },
+                "operator": "stringOperatorIs",
+                "valueObj": {
+                  "isValid": true,
+                  "type": "value",
+                  "value": null
+                },
+                "interactiveObj": {
+                  "prompt": "(Optional) Additional Zip Code:",
+                  "hint": "",
+                  "cascade": "none"
+                },
+                "caseSensitive": false
+              },
+              {
+                "fieldObj": {
+                  "name": "zip_code",
+                  "label": "zip_code",
+                  "dateFormat": "",
+                  "shortType": "string",
+                  "type": "esriFieldTypeString"
+                },
+                "operator": "stringOperatorIs",
+                "valueObj": {
+                  "isValid": true,
+                  "type": "value",
+                  "value": null
+                },
+                "interactiveObj": {
+                  "prompt": "(Optional) Additional Zip Code:",
+                  "hint": "",
+                  "cascade": "none"
+                },
+                "caseSensitive": false
+              }
+            ]
+          },
+          {
             "fieldObj": {
               "name": "zip_code",
               "label": "zip_code",
               "dateFormat": "",
-              "shortType": "number",
-              "type": "esriFieldTypeInteger"
+              "shortType": "string",
+              "type": "esriFieldTypeString"
             },
-            "operator": "numberOperatorIs",
+            "operator": "stringOperatorIs",
             "valueObj": {
               "isValid": true,
               "type": "value",
               "value": null
             },
             "interactiveObj": {
-              "prompt": "Enter Zip Code:",
+              "prompt": "(Optional) Additional Zip Code:",
               "hint": "",
               "cascade": "none"
             },
             "caseSensitive": false
           }
         ],
-        "expr": "",
-        "displaySQL": ""
+        "displaySQL": "",
+        "expr": ""
       },
-      "showSQL": true,
+      "showSQL": false,
       "spatialFilter": {
         "currentMapExtent": null,
         "drawing": null,
@@ -810,17 +1008,14 @@
         "fullLayerExtent": null
       },
       "popupInfo": {
-        "title": "Test numbers in {zip_code} between {week_start} and {week_end}",
+        "title": "Tests in {zip_code} between dates {week_start} and {week_end}",
         "fieldInfos": [
           {
             "fieldName": "zip_code",
             "label": "zip_code",
             "tooltip": "",
             "visible": false,
-            "format": {
-              "places": 0,
-              "digitSeparator": true
-            },
+            "format": null,
             "stringFieldOption": "textbox"
           },
           {
@@ -888,7 +1083,7 @@
           },
           {
             "fieldName": "tests_weekly",
-            "label": "tests weekly",
+            "label": "Number of Tests in the Week",
             "tooltip": "",
             "visible": true,
             "format": {
@@ -899,9 +1094,9 @@
           },
           {
             "fieldName": "tests_cumulative",
-            "label": "tests_cumulative",
+            "label": "Total Number of Cases in the Week",
             "tooltip": "",
-            "visible": false,
+            "visible": true,
             "format": {
               "places": 0,
               "digitSeparator": true
@@ -910,7 +1105,7 @@
           },
           {
             "fieldName": "test_rate_weekly",
-            "label": "test rate weekly",
+            "label": "Test Rate Per 100,000 Population in the Week",
             "tooltip": "",
             "visible": true,
             "format": {
@@ -1065,11 +1260,11 @@
         }
       },
       "canModifySymbol": false,
-      "enableExport": false,
+      "enableExport": true,
       "defaultExpand": true,
       "singleResultLayer": true,
-      "webMapLayerId": "091f7244-4b78-497d-8db3-ee4a95cbaf04",
-      "customResultName": true
+      "webMapLayerId": "Cases_Tests_Deaths_Final_8267",
+      "customResultName": false
     }
   ]
 }
